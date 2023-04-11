@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vídeos do IMD/UFRN</title>
+  <link rel="stylesheet" type="text/css"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h2 class="page-header">Vídeos do IMD/UFRN</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=m0XLzn5e3CA">Institucional IMD</a></li>
+          <li><a href="https://www.youtube.com/watch?v=_0fVH-7Q6uQ">Parque Metrópole</a></li>
+          <li><a href="https://www.youtube.com/watch?v=LHpQ_V3uxRk">Talento Metrópole</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://www.teaching-materials.org/common/youtube.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var Todososlinks = $('a');
+      for (var i = 0; Todososlinks.length; i++) {
+        var cadalink = $(Todososlinks[i]);
+        var url = cadalink.attr('href');
+        var thumb = youtube.generateThumbnailUrl(url);
+        let imagem = $('<img>');
+        imagem.attr('src', thumb);
+        cadalink.prepend(imagem);
+        imagem.hide();
+
+        cadalink.mouseenter(function(){imagem.stop();imagem.show(2000);});
+        cadalink.mouseleave(function(){imagem.stop();imagem.hide(2000);});
+      }
+    });
+  </script>
+</body>
+</html>

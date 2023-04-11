@@ -1,0 +1,52 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 02</title>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Exercício</h1>
+
+        <h2>Atividade 02-2</h2>
+
+        <p id="minhaResposta"></p>
+
+        <script>
+
+        var t1 = typeof(0);
+        var t2 = typeof(3.14);
+        var t3 = typeof(Infinity);
+        var t4 = typeof(NaN);
+        var t5 = typeof(true);
+        var t6 = typeof(4>1);
+        var t7 = typeof("texto");
+        var t8 = typeof("É tetra "+1994);
+        var t9 = typeof(Symbol("id"));
+        var t10 = typeof(Date);
+        var t11 = typeof(String);
+        var t12 = typeof([1,2,3,4]);
+        var t13 = typeof(null);
+        var t14 = typeof(undefined);
+        var t15 = typeof(alert);
+
+        var resposta = t1 + "<br>";
+        resposta = resposta + t2 + "<br>";
+        resposta = resposta + t3 + "<br>";
+        resposta = resposta + t4 + "<br>";
+        resposta = resposta + t5 + "<br>";
+        resposta = resposta + t6 + "<br>";
+        resposta = resposta + t7 + "<br>";
+        resposta = resposta + t8 + "<br>";
+        resposta = resposta + t9 + "<br>";
+        resposta = resposta + t10 + "<br>";
+        resposta = resposta + t11 + "<br>";
+        resposta = resposta + t12 + "<br>";
+        resposta = resposta + t13 + "<br>";
+        resposta = resposta + t14 + "<br>";
+        resposta = resposta + t15 + "<br>";
+
+        document.getElementById("minhaResposta").innerHTML = resposta;
+        </script>
+    </body>
+</html>

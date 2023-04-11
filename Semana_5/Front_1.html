@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programação Estruturada</title>
+	</head>
+	<style>
+		body{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		form{
+			margin: 0 auto;
+			width: 80%;
+			text-align: center;
+		}
+		input {
+			box-sizing: border-box;
+			width: 80%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+			
+		}
+
+		input[type=submit], input[type=reset]{
+			width: 20%;
+		}
+
+		select{
+			box-sizing: border-box;
+			width: 80%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+		}
+
+
+	</style>
+	<body>
+		<table>
+			<tr>
+				<th>Cadastro de produtos</th>
+			</tr>
+		</table>
+		<br>
+		<form action=" https://autoriaform.herokuapp.com/" method="post">
+		<label for="sku:">SKU:</label><br>
+		<input type="text" name="sku" id="sku">
+		<br>
+		<label for="produto">Produto:</label><br>
+		<input type="text" name="produto" id="produto">
+		<br>
+		<label for="peso">Peso:</label><br>
+		<input type="number" name="peso" id="peso" min="0" max="1000" step="10">
+		<br>
+		<label for="unidade">Unidade:</label><br>
+		<select id="unidade" name="unidade">
+			<option value="quilograma">quilograma (kg)</option>
+			<option value="grama">grama (g)</option>
+			<option value="tonelada">tonelada (t)</option>
+		</select>
+		<br>
+		<label for="largura">Largura (cm):</label><br>
+		<input type="number" id="largura" min="0" max="100" step="1" name="largura">
+		<br>
+		<label for="altura">Altura (cm):</label><br>
+		<input type="number" id="altura" min="0" max="100" step="1" name="altura">
+		<br>
+		<label for="profundidade">Profundidade (cm):</label><br>
+		<input type="number" id="profundidade" min="0" max="100" step="1" name="profundidade">
+		<br>
+		<input type="submit" id="Enviar" name="enviar"  value="Enviar">
+
+		<input type="reset" value="Limpar" id="limpar" name="limpar">
+
+
+		</form>
+	</body>
+</html>

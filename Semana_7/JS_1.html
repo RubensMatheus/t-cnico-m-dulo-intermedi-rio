@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programação Estruturada Q1</title>
+	</head>
+	<body>
+		<h1>Entrada do Programa</h1>
+		<button onclick='executarExercicio()'>OK</button>
+		<p id="resultado"></p>
+	<script>
+		function executarExercicio() {
+		// implemente a partir daqui
+		// Exemplo de comando de entrada
+		var vetor = [];
+		var i;
+		var nao_ordenado;
+		var ordenado;
+		function comparar(a, b){
+			return a - b;
+		}
+
+		for (var i = 0; i < 10; i++) {
+			var a = Number(prompt("Informe um número:"));
+			vetor[i] = a;
+		}
+		nao_ordenado = vetor.toString();
+		vetor.sort(comparar);
+		ordenado = vetor.toString();		
+		var r = nao_ordenado + "<br> <br>" + ordenado ; // atribua o resultado dos seus algoritmos a r
+		document.getElementById('resultado').innerHTML = r;
+		}
+	</script>
+	</body>
+</html>
